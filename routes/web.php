@@ -38,8 +38,8 @@ Route::group(['prefix'=> 'user'], function(){
 });
 /*ajax*/
 Route::get('ajax/location/getLocation', [LocationController::class, "getLocation"]) ->name('ajax.location.index') ->middleware('admin');
-Route::post('ajax/dashboard/changeStatus', [AjaxDashboardController::class, "changStatus"]) ->name('ajax.dasboard.changeStatus') ->middleware('admin');
-Route::post('ajax/dashboard/changeStatusAll', [AjaxDashboardController::class, "changStatusAll"]) ->name('ajax.dasboard.changeStatusAll') ->middleware('admin');
+Route::post('ajax/dashboard/changeStatus', [AjaxDashboardController::class, "changeStatus"]) ->name('ajax.dasboard.changeStatus') ->middleware('admin');
+Route::post('ajax/dashboard/changeStatusAll', [AjaxDashboardController::class, "changeStatusAll"]) ->name('ajax.dasboard.changeStatusAll') ->middleware('admin');
 
 Route::get('logout', [AuthController::class, "logout"]) ->name('auth.logout');
 Route::get('admin', [AuthController::class, "index"]) ->name('auth.admin')->middleware('login');

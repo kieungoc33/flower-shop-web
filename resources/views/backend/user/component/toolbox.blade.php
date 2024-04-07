@@ -10,7 +10,7 @@
             data-model ="User" >Active toàn bộ thành viên</a>
         </li>
         <li><a href="#" class ="changeStatusAll" data-value = "0" data-field = "publish"
-             data-model ="User"data-value="1">InActive toàn bộ thành viên</a>
+             data-model ="User">InActive toàn bộ thành viên</a>
         </li>
     </ul>
     <a class="close-link">
