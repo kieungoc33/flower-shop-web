@@ -93,7 +93,7 @@ class UserService  implements UserServiceInterface
         DB::beginTransaction();
         try {
             $payload[$post['field']] =$post['value'];
-            $flag = $this->userRepository->updateByWhereIn('id',$post['id'],$payload); 
+            $flag = $this->userRepository->updateByWhereIn('id',$post['id'],$payload);    
             DB::commit();
             return true;
         } catch (\Exception $e) {
@@ -111,7 +111,14 @@ class UserService  implements UserServiceInterface
         return $birthday;
     }
     private function paginateSelect(){
-        return ['id','email','phone','address','name','publish'];
+        return ['id',
+                'email',
+                'phone',
+                 'address',
+                 'name',
+                 'publish',
+                 'user_catalogue_id',
+                ];
 
     }
 
