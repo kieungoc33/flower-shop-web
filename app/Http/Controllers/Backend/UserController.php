@@ -40,7 +40,7 @@ class UserController extends Controller
             ],
         ] ;
         $config['seo'] = config('apps.user'); 
-        $template='backend.user.index';
+        $template='backend.user.user.index';
         return view('backend.dashboard.layout', compact('template', 'config',
          'users')) ;
     }
@@ -64,7 +64,7 @@ class UserController extends Controller
         $config['method'] = 'create';
 
 
-        $template='backend.user.store';
+        $template='backend.user.user.store';
         return view ('backend.dashboard.layout', compact('template', 'config','provinces'));
     }
     public function store(StoreUserRequest $request){
@@ -93,7 +93,7 @@ class UserController extends Controller
         $config['method'] = 'edit';
 
 
-        $template='backend.user.store';
+        $template='backend.user.user.store';
         return view ('backend.dashboard.layout', compact('template', 'config','provinces', 'user'));
     }
     public function update( $id,UpdateUserRequest $request,){
@@ -107,7 +107,7 @@ class UserController extends Controller
     public function delete($id){
         $config['seo'] = config('apps.user');
         $user = $this->userRespository->findById($id);
-        $template='backend.user.delete';
+        $template='backend.user.user.delete';
         return view ('backend.dashboard.layout', compact('template', 'user', 'config'));
 
     }

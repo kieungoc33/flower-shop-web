@@ -135,3 +135,6 @@ table strong{
     width: 15px;
     height: 15px;
 }
+.select2-container--default{
+    margin-right: 10px;
+}
