@@ -41,7 +41,7 @@ class UserCatalogueController extends Controller
     }
    public function create(){
        
-        $config['seo'] = config('apps.user');
+        $config['seo'] = config('apps.usercatalogue');
         $config['method'] = 'create';
 
 
@@ -57,7 +57,7 @@ class UserCatalogueController extends Controller
     public function edit($id){  
         $userCatalogue = $this->userCatalogueRespository->findById($id);
     
-        $config['seo'] = config('apps.user');
+        $config['seo'] = config('apps.usercatalogue');
         $config['method'] = 'edit';
 
 
@@ -73,7 +73,7 @@ class UserCatalogueController extends Controller
         
     }
     public function delete($id){
-        $config['seo'] = config('apps.user');
+        $config['seo'] = config('apps.usercatalogue');
         $userCatalogue = $this->userCatalogueRespository->findById($id);
         $template='backend.user.catalogue.delete';
         return view ('backend.dashboard.layout', compact('template', 'userCatalogue', 'config'));
