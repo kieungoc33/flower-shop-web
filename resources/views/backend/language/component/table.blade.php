@@ -3,6 +3,7 @@
                 <thead>
                 <tr>
                     <th><input type="checkbox" value id ='checkAll' class="input-checkbox"></th>
+                    <th style = "width:100px">Ảnh</th>
                     <th>Tên Ngôn Ngữ</th>
                     <th>Canonical</th>
                     <th>Mô tả</th>
@@ -12,11 +13,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @if (isset($languages) && is_object($languages))
+                    @if(isset($languages) && is_object($languages))
                     @foreach ($languages as $language)
                     
                 <tr>
                     <td> <input type="checkbox" value="{{$language->id}}" class="input-checkbox checkBoxItem"></td>
+                    <td>
+                        <span class ="image img-cover"><img src="{{$language->image}}" alt=""></span>
+                    </td>
                     <td>
                         {{$language->name}}
                     </td>

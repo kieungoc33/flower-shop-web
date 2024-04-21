@@ -19,7 +19,7 @@ h5{
     font-weight: normal;
 }
 table .image{
-    height: 73px;
+    height: 50px;
     display: block;
 }
 .img-cover img{
@@ -137,4 +137,62 @@ table strong{
 }
 .select2-container--default{
     margin-right: 10px;
+}
+.meta-title{
+    font-size: 20px;
+    color: #1a0dab
+
+}
+.canonical{
+    color: green;
+    margin-bottom: 8px;
+}
+.meta-description{
+    font-size: 14px;
+    
+}
+.seo-wrapper{
+    margin-top: 30px;
+}
+.seo-wrapper textarea{
+    height: 200pxn !important;
+}
+.notice{
+    font-size: 11px;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+.image-target{
+    cursor: pointer;
+}
+.input-wrapper{
+    position: relative;
+}
+.input-wrapper input:focus{
+    border-color: #e5e6e7 !important;;
+}
+.input-wrapper .baseUrl{
+    position: absolute;
+    background-color: #000;
+    height: 31px;
+    line-height: 31px;
+    display: inline-block;
+    padding: 0 10px;
+    left: 0;
+    top:0;
+    background: linear-gradient(to bottom, #fff, #f9fafb);
+    border-color: #e5e6e7 !important;
+    border: 1px solid;
+    border-right:0;
+
+}
+input[name=canonical]{
+    color: navy;
+    font-weight: 600;
+}
+button-fix{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
 }

@@ -41,6 +41,7 @@ class LanguageController extends Controller
          'languages')) ;
     }
    public function create(){
+        $config= $this->configData();
        
         $config['seo'] = config('apps.language');
         $config['method'] = 'create';
@@ -57,6 +58,7 @@ class LanguageController extends Controller
     }
     
     public function edit($id){  
+        $config= $this->configData();
         $language = $this->languageRespository->findById($id);
         $config['seo'] = config('apps.language');
         $config['method'] = 'edit';
@@ -85,6 +87,14 @@ class LanguageController extends Controller
         }
         return redirect()->route('language.index')->with('error', 'Xóa thất bại');
     }
-    
+    private function configData(){
+        return [
+            'js' =>[
+                'backend/plugin/ckfinder_2/ckfinder.js',
+                'backend/library/finder.js',
+            ],
+        ];
+       
+    }
    
 }

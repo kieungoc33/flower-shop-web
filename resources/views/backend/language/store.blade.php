@@ -67,9 +67,10 @@
                                         type="text"
                                         name="image"
                                         value="{{old('image', ($language -> image) ?? '')}}"
-                                        class="form-control"
+                                        class="form-control upload-image"
                                         placeholder=""
                                         autocomplete="off"
+                                        data-type="Images"
                                             
                                     >
                                 </div>
@@ -93,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-right mb15">
+        <div class="text-right mb15 button-fix">
             <button class="btn btn-primary" type="submit" name="send" value="send">Lưu Lại</button>
         </div>
     </div>

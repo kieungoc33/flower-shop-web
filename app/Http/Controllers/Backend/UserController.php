@@ -49,17 +49,7 @@ class UserController extends Controller
        
 
      
-        $config=[
-            'css'=>['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css'],
-            
-            'js' => ['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
-                     'backend/library/location.js',
-                     'backend/plugin/ckfinder_2/ckfinder.js',
-                     'backend/library/finder.js',
-            
-            ]
-                     
-        ]; 
+        $config= $this->config();
         $config['seo'] = config('apps.user');
         $config['method'] = 'create';
 
@@ -78,17 +68,7 @@ class UserController extends Controller
 
         $provinces = $this->provinceRepository ->all();
      
-        $config=[
-            'css'=>['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css'],
-            
-            'js' => ['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
-                     'backend/library/location.js',
-                     'backend/plugin/ckfinder_2/ckfinder.js',
-                     'backend/library/finder.js',
-            
-            ]
-                     
-        ]; 
+        $config= $this->config();
         $config['seo'] = config('apps.user');
         $config['method'] = 'edit';
 
@@ -117,5 +97,19 @@ class UserController extends Controller
         }
         return redirect()->route('user.index')->with('error', 'Xóa người dùng thất bại');
     }
+    private function config(){
+        return [
+            'css'=>['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css'],
+            
+            'js' => ['https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
+                     'backend/library/location.js',
+                     'backend/plugin/ckfinder_2/ckfinder.js',
+                     'backend/library/finder.js',
+            
+            ]
+                     
+        ]; 
+
+    } 
    
 }
